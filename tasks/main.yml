@@ -3,7 +3,7 @@
 - name: "Repository | Install gpg key"
   apt_key: id=79EA5ED4 url=http://repo.zabbix.com/zabbix-official-repo.key
 
-- name: "Repository | Installing {{ ansible_distribution }}"
+- name: "Repository | Add zabbix repository"
   apt_repository:
       repo: "{{ item }} http://repo.zabbix.com/zabbix/{{ zabbix_version }}/{{ ansible_distribution.lower() }}/ {{ ansible_distribution_release }} main"
       state: present
