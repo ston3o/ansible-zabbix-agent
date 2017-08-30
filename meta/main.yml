@@ -7,7 +7,7 @@ galaxy_info:
   platforms:
     - name: Debian
     - name: Ubuntu
-  categories:
+  galaxy_tags:
     - monitoring
     - zabbix
 dependencies: []
