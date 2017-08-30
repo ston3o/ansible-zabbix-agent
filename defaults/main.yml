@@ -1,0 +1,5 @@
+---
+
+zabbix_version: 3.4
+zabbix_server: zabbix.example.com
+zabbix_agent_hostname: "hostname"

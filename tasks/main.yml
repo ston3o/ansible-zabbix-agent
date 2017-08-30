@@ -1,0 +1,21 @@
+---
+
+- name: "Repository | Install gpg key"
+  apt_key: id=79EA5ED4 url=http://repo.zabbix.com/zabbix-official-repo.key
+
+- name: "Repository | Installing {{ ansible_distribution }}"
+  apt_repository:
+      repo: "{{ item }} http://repo.zabbix.com/zabbix/{{ zabbix_version }}/{{ ansible_distribution.lower() }}/ {{ ansible_distribution_release }} main"
+      state: present
+  with_items:
+      - deb-src
+      - deb
+
+- name: "Packages | Install zabbix-agent"
+  apt: name=zabbix-agent state=present
+
+- name: "Configuration | Configure zabbix-agent"
+  template: src=zabbix_agentd.conf.j2 dest=/etc/zabbix/zabbix_agentd.conf owner=root group=root mode=0644
+
+- name: "Configuration | Restart zabbix-agent"
+  systemd: state=restarted name=zabbix-agent

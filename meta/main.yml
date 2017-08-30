@@ -1,0 +1,13 @@
+---
+galaxy_info:
+  author: ston3o
+  description: "Install zabbix-agent on debian/ubuntu servers"
+  license: GPL3
+  min_ansible_version: 2.2.1
+  platforms:
+    - name: Debian
+    - name: Ubuntu
+  categories:
+    - monitoring
+    - zabbix
+dependencies: []
