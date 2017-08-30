@@ -4,7 +4,6 @@
   vars:
     - zabbix_version: 3.4
     - zabbix_server: zabbix.example.com
-    - zabbix_agent_hostname: "hostname" # Use the FQDN of the node where the agent runs
 
   roles:
     - role: ansible-zabbix-agent

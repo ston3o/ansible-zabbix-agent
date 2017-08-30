@@ -16,7 +16,7 @@ Example Playbook
   vars:
     - zabbix_version: 3.4
     - zabbix_server: zabbix.example.com
-    - zabbix_agent_hostname: "hostname" # Use the FQDN of the node where the agent runs
+    - zabbix_agent_hostname: "custom_hostname" # (optional)
 
   roles:
     - role: zabbix-agent
