@@ -1,5 +1,8 @@
-Ansible-zabbix-agent [![Ansible Galaxy](https://img.shields.io/badge/galaxy-zabbix-660198.svg)][1]
+Ansible-zabbix-agent [![Ansible Galaxy](https://img.shields.io/badge/galaxy-zabbix--agent-660198.svg)][1]
 ===
+
+[![Debian](https://img.shields.io/badge/platform-debian-red.svg)]()
+[![Ubuntu](https://img.shields.io/badge/platform-ubuntu-orange.svg)]()
 
 > Install zabbix-agent on debian/ubuntu servers.
 
